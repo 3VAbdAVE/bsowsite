@@ -1,0 +1,58 @@
+// @use "hugo:vars" as h;
+// $hero-height: 40vh;
+// $hero-vert: 300px;
+
+.hero-container {
+  container: hero-container / inline-size;
+  width: 100%;
+  //min-height: $hero-height;
+}
+
+.hero-image {
+  //height: 100%;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center $hero-vert;
+  }
+
+  @supports (-moz-appearance:none) { 
+  /* This seems to more or less align the background. */
+  div#hero-image{
+      background-position: center $hero-vert;
+  }
+}
+
+.hero-titles {
+  display: flex;
+  flex-direction: column;
+  text-shadow: h.$front-page-title-shadow;
+  padding-bottom: 2em;
+  @media all and (orientation:portrait) {
+      padding-top: 0.8em;
+    }
+}
+
+.hero-title {
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+}
+
+ .hero-title H1 {
+     font-size: 4em;
+     @media all and (orientation:portrait) {
+        text-align: center;
+      }
+ }
+
+.hero-subtitle {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  text-shadow: h.$front-page-title-shadow;
+  // @media all and (orientation:portrait) {
+  //   font-size: 3vw;
+  // }
+}

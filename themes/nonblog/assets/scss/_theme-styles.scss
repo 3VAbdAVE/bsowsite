@@ -1,0 +1,31 @@
+/* Font sizing */
+$front-page-subtitle-font-size: h.$front-page-subtitle-font-size;
+//$front-page-text-shadow: h.$front-page-text-shadow;
+
+/* Header opacity */
+$header-opacity: h.$header-opacity;
+
+/* Light theme color */
+
+$light-background: h.$light-background;
+$light-background-secondary: h.$light-background-secondary;
+$light-background-header: rgba(h.$light-background-header, $header-opacity);
+
+$light-color: h.$light-color;
+$light-color-variant: h.$light-color-variant;
+$light-color-secondary: h.$light-color-secondary;
+$light-border-color: h.$light-border-color;
+$light-table-color: h.$light-table-color;
+$light-header-color: h.$light-header-color;
+
+/* Dark theme colors */
+$dark-background: h.$dark-background;
+$dark-background-secondary: h.$dark-background-secondary;
+$dark-background-header: rgba(h.$dark-background-header, $header-opacity);
+
+$dark-color: h.$dark-color;
+$dark-color-variant: h.$dark-color-variant;
+$dark-color-secondary: h.$dark-color-secondary;
+$dark-border-color: h.$dark-border-color;
+$dark-table-color: h.$dark-table-color;
+$dark-header-color: h.$dark-header-color;

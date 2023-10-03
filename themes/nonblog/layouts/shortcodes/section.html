@@ -1,0 +1,20 @@
+<section id="{{ .Get "title" | plainify }}">
+    <div class="section">
+        {{ if isset .Params "imgsrc" }}
+            {{ $width := "50%" }}
+            {{ with .Get "imgwidth" }}
+                {{ $width = . }}
+            {{ end }}
+            {{ $float := "left "}}
+            {{ with .Get "imgalign" }}
+                {{ $float = . }}
+            {{ end }}
+            <div class="section-image" {{ with .Get "imgsrc"}} style="width: {{ $width | safeCSS }}; float: {{ $float | safeCSS }};"{{ end }}>
+                <img src="{{ with .Get "imgsrc" }} {{ . | safeURL }} {{ end }}" {{ with .Get "alt" }}alt="{{ . | plainify }}" {{ end }}/>
+        {{ end }}
+        </div>
+        <div class="section-text">
+            {{ .Inner | markdownify }}
+        </div>
+    </div>
+</section>

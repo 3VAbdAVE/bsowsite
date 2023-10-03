@@ -1,0 +1,110 @@
+# Theme version
+version = "0.1"
+name = "Nonblog"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+
+theme = "nonblog"
+
+# Tags end up in the meta as well as other content
+tags = []
+features = []
+
+# Prefix all links with this
+baseURL = "http://example.com/"
+
+# this is the title/description for the meta and head info.
+siteTitle   = "Example Site Title"
+siteDescription = "example site description"
+
+[author]
+  # Site author metadata
+  name = "Dave"
+  authorHomepage = ""
+
+[params]
+  # Turning this on will put an icon in the top right to 
+  # override the theme. 
+  EnableThemeToggle = true
+  # Custom CSS loaded after theme CSS
+  custom_css = []
+  # Custom JavaScript loaded after theme JavaScript
+  custom_js = []
+
+[params.homePage]
+  #Configuration for the home page
+  homeTitle = "Example Title on the Home Page"
+  homeSubtitle = "Example Subtitle on the Home Page"
+  backgroundImage = ''
+  # Apply a blur filter to the background in pixel radius. 0 = disabled.
+  backgroundImageBlur = 0
+  # Apply a sepia tone filter to the hero image in percent. 0 = disabled.
+  backgroundImageSepia = 0
+
+[params.logo]
+  # Configuration for the logo on the header menu.
+  # This text is displayed next to the logo.
+  logoText = "Example Site"
+  logoHomeLink = "/"
+
+  #If you don't supply an image or logoText it'll just say "Hello" with a cursor.
+  logoImage = "/img/example-logo.png"
+  alt = "Example Logo"
+
+[params.subPage]
+  # Subpage (everything that isn't the home page) configuration
+  subPageHeroImage = "/images/banner_image_lounge.jpg"
+  # Apply a blur filter to the hero image in pixel radius. 0 = disabled.
+  subPageHeroBlur = 0
+  # Apply a sepia tone filter to the hero image in percent. 0 = disabled. 
+  subPageHeroSepia = 0
+
+# Simple static menus which will display on every page
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+    weight   = 10
+
+  [[menu.main]]
+    identifier = "examplesubpage"
+    name       = "Example Sub Page"
+    url        = "example/"
+    weight   = 40
+
+
+[ params.style ]
+  [ params.style.header ]
+    # This will set the logo/mark and menu relative positions using the CSS 
+    # justify-content parameter.
+    # "space-between" is the default: Logo left, menu right
+    # "left" will put the logo and menu together on the left
+    # right will put the logo and menu together on the right
+    # Other CSS values work as expected.
+    header_positioning = ""
+    # Set the header to be transparent. This is useful if you set backgroundImage
+    # and/or a subpage banner. Set to 1 for opaque.
+    transparency = 1
+
+  [ params.style.theme ]
+    # This is setting defaults, but you can reconfigure theme colors here.
+    # Light theme color
+    light_background = "#fff"
+    light_background_secondary = "#eaeaea"
+    light_background_header = "#fafafa"
+    light_color = "#222"
+    light_color_variant = "black"
+    light_color_secondary = "#999"
+    light_border_color = "#dcdcdc"
+    light_table_color = "#dcdcdc"
+
+    # Dark theme colors
+    dark_background = "#232425"
+    dark_background_secondary = "#3b3d42"
+    dark_background_header = "#1b1c1d"
+    dark_color = "#a9a9b3"
+    dark_color_variant = "white"
+    dark_color_secondary = "#b3b3bd"
+    dark_border_color = "#4e4e57"
+    dark_table_color = "#4e4e57"

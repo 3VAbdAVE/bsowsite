@@ -1,0 +1,23 @@
+{{ if not .IsHome }}
+    <div class="hero-titles">
+        <div class="hero-title">
+            {{ $title := "" }}
+            {{ if .Title }}
+                {{ $title = .Title }}
+            {{ else }}
+                {{ $title = .Site.Title}}
+            {{ end }}
+            <h1>{{ $title }}</h1>
+            <div class="hero-subtitle">
+                {{ $subtitle := "" }}
+                {{ if .Description }}
+                    {{ $subtitle = .Description }}
+                {{ else }}
+                    {{ $subtitle = .Site.Params.Homepage.subtitle }}
+                {{ end }}
+                <h2 class="hero-subtitle">{{ $subtitle | markdownify }}</h2>
+            </div>
+        </div>
+    </div>
+{{ end }}
+

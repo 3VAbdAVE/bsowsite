@@ -1,0 +1,27 @@
+.section {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section-image {
+    float: left;
+    width: 40%;
+    margin: 20px 20px 10px 20px;
+}
+
+.section-image IMG {
+    max-width: 100%;
+}
+
+.section-text {
+    //overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .section-image {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+}

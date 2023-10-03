@@ -1,0 +1,36 @@
+<footer class="footer">
+{{- if and (.IsHome) (.Site.Params.Style.Theme.front_page_content_box) }}
+    <div id="front-page-content-box" style="margin-left:auto; margin-right:auto;">
+{{ end }}
+    {{if or (.Site.Params.footer.trademark) (.Site.Params.footer.author) (.Site.Params.footer.copyright) (.Site.Params.footer.topText) }}
+    <div class="footer__inner">
+        <div class="footer__content">
+            {{ if .Site.Params.footer.trademark }}
+                <span>&copy; {{ now.Format "2006" }}</span>
+            {{ end }}
+
+            {{ if .Site.Params.footer.author }}
+                <span>
+                {{ if $.Site.Author.homepage }}
+                    <a href="{{ .Site.Author.homepage }}">{{ $.Site.Author.name }}</a>
+                {{ else }}
+                    {{ $.Site.Author.name }}
+                {{ end }}
+                </span>
+            {{ end }}
+            {{ if .Site.Params.footer.copyright }}<span>{{ .Site.Copyright| safeHTML }}</span>{{ end }}
+            {{ range .Site.Params.footer.topText }}<span>{{ . | safeHTML}}</span>{{ end }}
+        </div>
+    </div>
+    {{ end }}
+    {{with .Site.Params.footer.bottomText}}
+    <div class="footer__inner">
+        <div class="footer__content">
+            {{ range . }}<span>{{ . | safeHTML}}</span>{{ end }}
+        </div>
+    </div>
+    {{ end }}
+{{- if and (.IsHome) (.Site.Params.Style.Theme.front_page_content_box) }}
+    </div>
+{{ end }}
+</footer>

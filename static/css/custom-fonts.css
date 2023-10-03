@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "JungleFever";
+    src:url("/fonts/JungleFeverNf-o1Zz.woff2") format(woff2),
+    url("/fonts/JungleFeverNf-o1Zz.woff") format(woff),
+    url("/fonts/JungleFeverNf-o1Zz.ttf") format(truetype); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Carribean";
+    src:url("/fonts/carribean.woff2") format(woff2),
+    url("/fonts/carribean.woff") format(woff),
+    url("/fonts/carribean.ttf") format(truetype);
+}
+
+#front-page-title H1 {
+    font-family: "JungleFever", "sans-serif";
+}
+
+#front-page-subtitle {
+    font-family: 'Carribean', serif;
+}
+
+.hero-title H1 {
+    font-family: "JungleFever", "sans-serif";
+}
+
+.hero-subtitle {
+    font-family: 'Carribean', serif;
+}

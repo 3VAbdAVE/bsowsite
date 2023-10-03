@@ -1,0 +1,165 @@
+# General site config
+version = "0.1"
+languageCode = "en-us"
+name = "The Backside of Water Bar"
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+copyright       = "Copyright String"
+theme = "nonblog"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpired = false
+canonifyURLs = true
+
+# Tags end up in the meta as well as other content
+tags = ["tiki", "pirates", "yourmom"]
+features = []
+
+# Prefix all links with this
+baseURL = "https://backsideofwaterbar.com"
+
+# this is the title/description for the meta and head info.
+# This will display on the front-page unless you override it in 
+# the _index.md content front-matter.
+title   = "The Backside of Water Bar"
+description = "A secret place for explorers and adventurers."
+
+[author]
+  # Site author metadata
+  name = "Dave"
+  homepage = "https://backsideofwaterbar.com"
+
+[params]
+  # Turning this on will put an icon in the top right to 
+  # override the theme. 
+  EnableThemeToggle = 0
+  # Custom CSS loaded after theme CSS
+  customCss = ["/css/custom-fonts.css"]
+  # Custom JavaScript loaded after theme JavaScript
+  custom_js = []
+
+  [params.portrait]
+     path     = "/img/logo.png"
+     alt      = "Logo"
+     maxWidth = "200px"
+
+  [params.homepage]
+    #Configuration for the home page
+    Subtitle = "A secret place for explorers and adventurers."
+    backgroundImage = '/images/frontpage_background_large.png'
+    # Apply a blur filter to the background in pixel radius. 0 = disabled.
+    backgroundImageBlur = 2
+    # Apply a sepia tone filter to the hero image in percent. 0 = disabled.
+    backgroundImageSepia = 60
+
+  [params.logo]
+    # Configuration for the logo on the header menu.
+    # This text is displayed next to the logo.
+    logoText = "BSoW"
+    logoHomeLink = "/"
+    #If you don't supply an image or logoText it'll just say "Hello" with a cursor.
+    # ( This was part of the "Hello Friend NG" theme, and is pretty cool, so leave it.
+    logoImage = "/img/logo.png"
+    alt = "BSoW Logo"
+
+  [params.footer]
+    trademark = true
+    # Add a copyright + year
+    copyright = false
+    author = true
+    topText = []
+    bottomText = ["Powered by rum and ghosts"]
+
+  [params.hero]
+    # This section can apply a global setting, which can be overridden in each page.
+    #height of the box containing the hero.
+    height = "150px"
+    # If the image is larger than this, it can be positioned manually. 
+    # This setting is a little weird switching between mobile/desktop
+    # "vw" units seem to work ok. By default, the theme will center
+    # the hero image vertically.
+    vert = "center"
+
+
+# Simple static menus which will display on every page
+[menu]
+  [[menu.main]]
+    identifier = "3dtour"
+    name       = "3d Tour"
+    url        = "/3dtour/"
+    weight   = 10
+
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "/projects/"
+    weight    = 5
+
+
+# Hugo makes it kind of a pain in the ass to recast these variable types, and it 
+# seems like the Dart SASS processor only reads things in params.style for SCSS 
+# variables.
+# Therefore, all the settings below can use valid CSS value. (em, px, rgba() etc.)
+[ params.style ]
+
+  [ params.Style.header ]
+    # This will set the logo/mark and menu relative positions using the CSS 
+    # justify-content parameter.
+    # "space-between" is the default: Logo left, menu right
+    # "left" will put the logo and menu together on the left
+    # right will put the logo and menu together on the right
+    # Other CSS values work as expected.
+    header_positioning = "space-between"
+
+  [ params.Style.Theme ]
+    # Set the header to be transparent. This is useful if you set backgroundImage
+    # and/or a subpage banner. Must be higher than 0, but set to 1 for opaque.
+    header_opacity = 0.8
+    # Adjust the title font size
+    title_font_size = "2.5em"
+    # Adjust the logo size to a multiple of the title font's size
+    title_logo_multiplier = "5"
+    # Adjust the front-page subtitle size
+    front_page_subtitle_font_size = "1.5em"
+    # use a shadow to make the title and such pop, or be more 
+    # readable with a background image.
+    # Remove to disable.
+    front_page_title_shadow = "-3px 3px 1px #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
+
+    #Smaller shadow for any content text on the front-page. Remove to disable.
+    # Recommended to use this *or* the content box to improve readability with
+    # background images, but not both.
+    #front_page_text_shadow = "-1px 1px 1px #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
+
+    # Render a transparent contrasted box around any content text on the front page. 
+    # Makes it much easier to read on top of a background image.
+    # Probably want either this or the text_shadow, not both, but they'll both render.
+    front_page_content_box = 1
+
+    # Reconfigure theme colors here.
+    # Light theme color
+    light_background = "#fff"
+    light_background_secondary = "#eaeaea"
+    light_background_header = "#fafafa"
+    light_color = "#222"
+    light_color_variant = "#222"
+    light_color_secondary = "#999"
+    light_border_color = "#dcdcdc"
+    light_table_color = "#dcdcdc"
+    light_header_color = "black"
+
+    # Dark theme colors
+    dark_background = "#232425"
+    dark_background_secondary = "#3b3d42"
+    dark_background_header = "#1b1c1d"
+    dark_color = "#d0e9c7;"
+    dark_color_variant = "#d0e9c7"
+    dark_color_secondary = "#b3b3bd"
+    dark_border_color = "#4e4e57"
+    dark_table_color = "#4e4e57"
+    dark_header_color = "#fff"
+
+
+

@@ -1,0 +1,73 @@
+
+.header {
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  // Default
+  background: rgba($light-background-header, h.$header-opacity);
+  color: $dark-header-color;
+  padding: 5px;
+
+
+  @media (prefers-color-scheme: dark) {
+    background: rgba($dark-background-header, h.$header-opacity);
+    color: $dark-header-color;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: rgba($light-background-header, h.$header-opacity);
+    color: $light-header-color;
+  }
+
+  [data-theme=dark] & {
+    background: rgba($dark-background-header, h.$header-opacity);
+    color: $dark-header-color;
+  }
+
+  [data-theme=light] & {
+    background: rgba($light-background-header, h.$header-opacity);
+    color: $light-header-color;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @media #{$media-size-phone} {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    //justify-content: space-between;
+    justify-content: $justify_header;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.theme-toggler {
+  fill: currentColor;
+}
+
+.not-selectable {
+  user-select: none;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+}

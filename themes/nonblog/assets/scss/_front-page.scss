@@ -1,0 +1,88 @@
+// Title and portrait/logo on the front page
+
+#front-page-lead {
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    font-size: h.$title-font-size;
+    text-shadow: $front-page-title-shadow;
+}
+
+#front-page {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#front-page-title H1 {
+    font-size: h.$title-font-size;
+    @media all and (orientation:portrait) {
+      font-size: 6vw;
+    }
+}
+
+#front-page > :first-child {
+    margin-right: .5em;
+  }
+
+#front-page-subtitle {
+    display: flex;
+    margin: auto;
+    font-size: $front-page-subtitle-font-size;
+    justify-content: center;
+    @media all and (orientation:portrait) {
+      font-size: 4vw;
+    }
+}
+
+#front-page-content {
+    padding-top: 6em;
+    padding-bottom: 3em;
+    text-shadow: $front-page-text-shadow;
+    //display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    text-align: center;
+
+    @media all and (orientation:portrait) {
+      padding-top: 2em;
+      width: 90vw;
+    }
+}
+
+#front-page-content-box {
+    border-style: solid;
+    background-color: rgba(0, 0, 0, $header-opacity);
+    border-radius: 5px;
+    
+    @media (prefers-color-scheme: dark) {
+        background-color: rgba($dark-background, $header-opacity);
+        color: $dark-color;
+      }
+    
+      @media (prefers-color-scheme: light) {
+        background-color: rgba($light-background-header, $header-opacity);
+        color: $light-color;
+      }
+    
+      [data-theme=dark] & {
+        background-color: rgba($dark-background, $header-opacity);
+        color: $dark-color;
+      }
+    
+      [data-theme=light] & {
+        background-color: rgba($light-background-header, $header-opacity);
+        color: $light-color;
+      }
+}
+
+#front-page-content-box h1, h2, h3, h4, h5, h6 {
+  justify-content: center;
+}
+
+#front-page-content-box a {
+  display: flex-flow;
+  justify-content: center;
+}

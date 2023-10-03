@@ -1,0 +1,46 @@
+{{ define "body" }}
+    {{ with $bg := resources.GetMatch .Site.Params.homePage.backgroundImage }} 
+        {{ with $.Site.Params.homePage.backgroundImageBlur }}
+            {{ $bg = $bg | images.Filter (images.GaussianBlur .) }} 
+        {{end}}
+        {{ with $.Site.Params.homePage.backgroundImageSepia }}
+            {{ $bg = $bg | images.Filter (images.Sepia .) }} 
+        {{end}}
+        <body class="background-image" style="background-image: url('{{ $bg.RelPermalink }}')">
+    {{ end }}
+{{ end }}
+
+{{ define "main" }}
+    <main>
+        <div id="front-page-lead">
+            <div id="front-page">
+                {{ if .Site.Params.Portrait.Path }}
+                    <div id="front-page-logo">
+                            <img src="{{ .Site.Params.Portrait.Path }}" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Style.Theme.title_logo_multiplier }}em" />
+                    </div>
+                {{ end }}
+                <div id="front-page-title">
+                    {{ $title := "" }}
+                    {{ if .Title }}
+                        {{ $title = .Title }}
+                    {{ else }}
+                        {{ $title = .Site.Title }}
+                    {{ end }}
+                    <h1>{{ $title }}</h1>
+                </div>
+            </div>
+            <div>
+                {{ $subtitle := "" }}
+                {{ if .Description }}
+                    {{ $subtitle = .Description }}
+                {{ else }}
+                    {{ $subtitle = .Site.Params.homepage.subtitle }}
+                {{ end }}
+                <h2 id="front-page-subtitle">{{ $subtitle }}</h2>
+            </div>
+        </div>
+        <div>
+            {{ partial "index-content.html" . }}
+        </div>
+    </main>
+{{ end }}

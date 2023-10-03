@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Archicoco';
+    src: url('/fonts/Archicoco.woff2') format('woff2'),
+         url('/fonts/Archicoco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Banana Brick';
+    src: url('/fonts/BBrick.woff2') format('woff2'),
+         url('/fonts/BBrick.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#front-page-title H1 {
+    font-family: "Archicoco", "sans-serif";
+}
+
+#front-page-subtitle {
+    font-family: 'Banana Brick', serif;
+}
+
+.hero-title H1 {
+    font-family: "Archicoco", "sans-serif";
+}
+
+.hero-subtitle {
+    font-family: 'Banana Brick', serif;
+}

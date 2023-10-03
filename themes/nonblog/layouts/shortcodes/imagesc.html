@@ -1,0 +1,11 @@
+{{ if .Get "link" }}
+    <a href="{{ .Get "link" | safeURL }}" {{ with .Get "title" }} title="{{ . | plainify }}" {{ end }}>
+{{ end }}
+
+    {{ if .Get "src" }}
+        <img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }}/>
+    {{ end }}
+
+{{ if .Get "link" }}
+    </a>
+{{ end }}

@@ -1,0 +1,17 @@
+<div id="front-page-content">
+    {{- if .Site.Params.Style.Theme.front_page_content_box }}
+            <div id="front-page-content-box">
+    {{ else }}
+            <div>
+    {{- end }}
+        <div style="margin: 2.6em;">
+        {{ with .Params.Justify }}
+            <div style="text-align: {{ . }};">
+        {{ end }}
+        {{ .Content }}
+        {{ with .Params.Justify }}
+            </div>
+        {{ end }}
+        </div>
+        </div>
+</div>
