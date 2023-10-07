@@ -3,12 +3,7 @@ title: "Automating Holidays"
 Description: "Get HomeAssistant to sense the holiday seasons."
 
 # Pop an image hero at the top of the page.
-heroImage: "/images/banner_image_lounge.jpg"
-# Hero height. Should take any CSS value, default px.
-heroHeight: "300px"
-# Slide the hero vertically in case your image isn't designed specifically for
-# this purpose.
-heroVert: "-650px"
+heroImage: "/images/banner_image_lounge_crop.jpg"
 # Apply a Blur effect to the hero 
 heroBlur: 4
 # Apply a Sepia tone effect to the hero
@@ -16,58 +11,6 @@ heroSepia: 60
 ---
 
 ## The Problem
-
-### This will test the section shortcode
-
-{{< section title="Opening the Section" imgsrc="ha-holiday-dashboard.png" alt="Example Dashboard" imgalign="right" >}}
-
-**This is the test text. It should markdownify, right?**
-
-***squiffy black***
-
-Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
-
-Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
-
-## barque interloper
-
-- Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. 
-- Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters.
-- Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.
-
-### Sail ho shrouds
-
-*Deadlights jack* lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her **cable holystone blow** the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul ***squiffy black spot yardarm*** spyglass sheet transom heave to.
-
-{{</section>}}
-
-### This closes the shortcode test.
-
-### This will test the section shortcode
-
-{{< section title="Opening the Section" imgsrc="ha-holiday-dashboard.png" alt="Example Dashboard" imgalign="left" imgwidth="400px" >}}
-
-**This is the test text. It should markdownify, right?**
-
-***squiffy black***
-
-Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
-
-Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
-
-## barque interloper
-
-- Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. 
-- Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters.
-- Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.
-
-### Sail ho shrouds
-
-*Deadlights jack* lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her **cable holystone blow** the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul ***squiffy black spot yardarm*** spyglass sheet transom heave to.
-
-{{</section>}}
-
-### This closes the shortcode test.
 
 Home Assistant can tell you if it's Thanksgiving if you have a calendar plugin configured with Thanksgiving scheduled. But the included Calendar plugin doesn't have that pre-scheduled, and what if you don't want to use a Cloud calendar service? The date sensor isn't very good with date math, and getting "Thanksgiving" to a date is difficult because it's not a fixed day.
 

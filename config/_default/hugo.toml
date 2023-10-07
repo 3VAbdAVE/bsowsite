@@ -13,18 +13,13 @@ buildFuture  = false
 buildExpired = false
 canonifyURLs = true
 
-# Tags end up in the meta as well as other content
-tags = ["tiki", "pirates", "yourmom"]
-features = []
-
 # Prefix all links with this
 baseURL = "https://backsideofwaterbar.com"
 
-# this is the title/description for the meta and head info.
+# this is the title for the meta and head info.
 # This will display on the front-page unless you override it in 
 # the _index.md content front-matter.
 title   = "The Backside of Water Bar"
-description = "A secret place for explorers and adventurers."
 
 [author]
   # Site author metadata
@@ -32,6 +27,15 @@ description = "A secret place for explorers and adventurers."
   homepage = "https://backsideofwaterbar.com"
 
 [params]
+# this is the description for the meta and head info.
+# This will display on the front-page unless you override it in 
+# the _index.md content front-matter.
+  homeDescription = "A lost place for explorers and adventurers..."
+  # keywords end up in the meta as well as other content
+  keywords = ["tiki", "home tiki bar", "tiki bar", "exotica", "adventure", "escapism", "pirates", "home bar", "diy", "basement", "polynesianpop", "yourmom"]
+  features = []
+  # Force a default theme color
+  themeColor = "dark"
   # Turning this on will put an icon in the top right to 
   # override the theme. 
   EnableThemeToggle = 0
@@ -47,7 +51,7 @@ description = "A secret place for explorers and adventurers."
 
   [params.homepage]
     #Configuration for the home page
-    Subtitle = "A secret place for explorers and adventurers."
+    Subtitle = "A lost place for explorers and adventurers."
     backgroundImage = '/images/frontpage_background_large.png'
     # Apply a blur filter to the background in pixel radius. 0 = disabled.
     backgroundImageBlur = 2
@@ -89,13 +93,25 @@ description = "A secret place for explorers and adventurers."
     identifier = "3dtour"
     name       = "3d Tour"
     url        = "/3dtour/"
-    weight   = 10
+    weight   = 15
 
   [[menu.main]]
     identifier = "projects"
     name       = "Projects"
     url        = "/projects/"
-    weight    = 5
+    weight    = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name        = "About"
+    url         = "/about"
+    weight      = 5
+
+  [[menu.main]]
+    identifier  = "gallery"
+    name        = "Gallery"
+    url         = "/gallery"
+    weight      = 7
 
 
 # Hugo makes it kind of a pain in the ass to recast these variable types, and it 
@@ -140,21 +156,21 @@ description = "A secret place for explorers and adventurers."
 
     # Reconfigure theme colors here.
     # Light theme color
-    light_background = "#fff"
-    light_background_secondary = "#eaeaea"
-    light_background_header = "#fafafa"
-    light_color = "#222"
-    light_color_variant = "#222"
-    light_color_secondary = "#999"
-    light_border_color = "#dcdcdc"
-    light_table_color = "#dcdcdc"
-    light_header_color = "black"
+    light_background = "#232425"
+    light_background_secondary = "#3b3d42"
+    light_background_header = "#1b1c1d"
+    light_color = "#d0e9c7"
+    light_color_variant = "#d0e9c7"
+    light_color_secondary = "#b3b3bd"
+    light_border_color = "#4e4e57"
+    light_table_color = "#4e4e57"
+    light_header_color = "#fff"
 
     # Dark theme colors
     dark_background = "#232425"
     dark_background_secondary = "#3b3d42"
     dark_background_header = "#1b1c1d"
-    dark_color = "#d0e9c7;"
+    dark_color = "#d0e9c7"
     dark_color_variant = "#d0e9c7"
     dark_color_secondary = "#b3b3bd"
     dark_border_color = "#4e4e57"

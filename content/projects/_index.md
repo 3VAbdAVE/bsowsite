@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+Description: " "
 
 # Pop an image hero at the top of the page.
 heroImage: "/images/banner_image_lounge_crop.jpg"
