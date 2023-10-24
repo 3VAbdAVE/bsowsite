@@ -14,9 +14,9 @@
     <main>
         <div id="front-page-lead">
             <div id="front-page">
-                {{ if .Site.Params.Portrait.Path }}
+                {{ if .Site.Params.titlelogo.Path }}
                     <div id="front-page-logo">
-                            <img src="{{ .Site.Params.Portrait.Path }}" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Style.Theme.title_logo_multiplier }}em" />
+                            <img src="{{ .Site.Params.titlelogo.Path }}" alt="{{ .Site.Params.titlelogo.Alt }}" style="max-width:{{ .Site.Params.Style.Theme.title_logo_multiplier }}em" />
                     </div>
                 {{ end }}
                 <div id="front-page-title">

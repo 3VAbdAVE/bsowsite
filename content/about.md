@@ -11,9 +11,11 @@ heroSepia: 60
 
 The BackSide of Water Bar started as a little basement project during the pandemic. I figured if I couldn't get to my favorite tiki bars, I'd build my own.
 
+I'm intentionally hard to find, but I'm on [Instagram](https://www.instagram.com/theonlydavethatmatters/).
+
 ## So it's a tiki bar?
 
-More or less. I'd prefer to consider the theme an "Adventure", but no one knows what that means. If you say "tiki", people get it.
+More or less. I'd prefer to consider the theme an "Adventure", but no one knows what that means. If you say "tiki", people have some idea.
 
 ## Where is it?
 
@@ -22,6 +24,12 @@ Somewhere along the Nile river near the legendary Schweitzer Falls. Just follow 
 ## So I can't visit?
 
 No, probably not.
+
+## I'm not those guys
+
+A couple years ago there was a Back Side of Water Bar [featured on](https://www.tikiwithray.com/home-tiki-bar-spotlight-79-back-side-water-gig-harbor-wa/) Tiki with Ray.
+
+That isn't me, those guys are on the west coast. We just happened to use the same dumb Jungle Cruise reference as a name for a home bar.
 
 ## Tiki is cringey appropriation
 

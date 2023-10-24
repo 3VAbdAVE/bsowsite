@@ -44,7 +44,10 @@ title   = "The Backside of Water Bar"
   # Custom JavaScript loaded after theme JavaScript
   custom_js = []
 
-  [params.portrait]
+  plausibleDataDomain = "backsideofwaterbar.com"
+  plausibleScriptSource = "https://web.backsideofwaterbar.com:8000/js/script.js"
+
+  [params.titlelogo]
      path     = "/img/logo.png"
      alt      = "Logo"
      maxWidth = "200px"
